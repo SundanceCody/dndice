@@ -35,6 +35,17 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     Roll = randint(1, Sides)
+    if (Dice == 5) {
+        if (Roll == 20) {
+            music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.OnceInBackground)
+        } else if (Roll == 1) {
+            music.startMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.OnceInBackground)
+        } else {
+            music.startMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.OnceInBackground)
+        }
+    } else {
+        music.startMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.OnceInBackground)
+    }
 })
 let Sides = 0
 let Roll = 0
