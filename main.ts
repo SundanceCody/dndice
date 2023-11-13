@@ -50,7 +50,7 @@ input.onGesture(Gesture.Shake, function () {
 let Sides = 0
 let Roll = 0
 let Dice = 0
-led.setBrightness(255)
+led.setBrightness(127)
 Dice = 0
 Roll = 1
 Which_Dice()
